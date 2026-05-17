@@ -1,0 +1,29 @@
+package edu.ncsu.csc316.dsa.data;
+
+import java.util.Comparator;
+
+/**
+ * Comparator for comparing Students based on GPA
+ * @author Dr. King
+ * @author Diya Patel
+ */
+public class StudentGPAComparator implements Comparator<Student> {
+
+	/**
+	 * Compares students based on GPA in descending order
+	 * @param one , one of the students to compare
+	 * @param two , the other student that we are comparing the GPA of 
+	 * @return 0 if the GPA is the same 
+	 */
+	@Override
+	public int compare(Student one, Student two) {
+		if(one.getGpa() < two.getGpa()) {
+			return 1; 
+		}
+		else if(one.getGpa() > two.getGpa()) {
+			return -1; 
+		}
+		return 0;
+	}
+
+}
